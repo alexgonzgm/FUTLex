@@ -1,0 +1,278 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string search = ViewData["SEARCH"] as string;
+}
+
+@model FUTLex.Models.Player
+
+
+
+    <div class="container" background-repeat:no-repeat; background-size:cover !important;">
+        
+        <div class=" row col-md-12 ">
+            <div class="col-md-4 col-lg-4 col-6"> <img src="@Model.image" style="        height: 250px;
+        width: 250px;
+" /></div>
+            <div class="col-md-4 col-lg-4 col-6  p-5">
+                <strong class="m-5"><label style="font-size:300%" ;>@Model.full_name</label></strong>
+                <img src="@Model.nation_image" style="height:50px ; width:50px;" class="ml-5" />
+            </div>
+            <div class="col-md-4 col-lg-4 col-6 text-center"><img src="@Model.club_image" style="height:150px ; width:150px;" /></div>
+
+
+
+
+        </div>
+        <div class="card p-3">
+            <div>
+                <div class="row col-md-12">
+                    <div class="col-md-4 col-lg-4 col-6">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">RITMO</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.Pace</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.Pace%" aria-valuenow="@Model.Pace" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Aceleración</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Acceleration</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Velocidad de sprint </strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.SprintSpeed</strong> </div>
+
+                        </div>
+                        <div></div>
+
+                    </div>
+
+
+                    <div class="col-md-4 col-lg-4 col-6">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">DISPARO</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.Shooting</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.Shooting%" aria-valuenow="@Model.Shooting" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Posicionamiento</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Positioning</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Definicion</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Finishing</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Potencia</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.ShotPower</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Tiros Largos</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.LongShots</strong> </div>
+
+                        </div>
+
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Voleas</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Volleys</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Penaltis</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Penalties</strong> </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-6">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">PASE</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.Passing</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.Passing%" aria-valuenow="@Model.Passing" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Vision de Juego</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Visiion</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Cruece</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Crossing</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Cruece</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Crossing</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Precisión</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.FkAccuaracy</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Pases Cortos</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.ShortPassing</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Pases Largos</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.LongPassing</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Efecto</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Curve</strong> </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="col-md-4 col-lg-4 col-6 mt-3">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">REGATE</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.DribblingTotal</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.DribblingTotal%" aria-valuenow="@Model.DribblingTotal" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Agilidad</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Agility</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Equilibrio</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Balance</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Reacción</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Reactions</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Control del Balón</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.BallControl</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Regate</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Dribbling</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Compostura</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Composturte</strong> </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-6 mt-3">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">DEFENSA</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.Defending</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.Defending%" aria-valuenow="@Model.Defending" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Intercepciones</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Interceptions</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Liderazgo</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.HeadingAcuaricy</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Marcaje</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Marking</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Entrada normal</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.StandingTackle</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Entrada Agrasiva</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.SlindingTackle</strong> </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-6 mt-3">
+                        <div>
+
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:21px">FISICO</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:21px; color:forestgreen">@Model.PHYSICALITY</strong> </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: @Model.PHYSICALITY%" aria-valuenow="@Model.PHYSICALITY" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size: 15px;">Salto</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Jumping</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Resistencia</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Stamina</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Fuerza</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Strength</strong> </div>
+
+                        </div>
+                        <div>
+                            <div class="col-10" style="display:inline-block"> <strong style="font-size:15px">Agresividad</strong></div>
+                            <div style="display:inline-block">  <strong style="font-size:15px">@Model.Agression</strong> </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+            <a asp-action="Index" asp-route-search="@ViewData["SEARCH"]">Back to List</a>
+        </div>
+    </div>
